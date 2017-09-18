@@ -19,7 +19,10 @@ public class Team {
     // TODO validity checking for headcoach
     // TODO validity checking for funding
     this.name = name;
-    // TODO complete this constructor
+    this.headcoach = headcoach;
+    this.funding = funding;
+    // DONE complete this constructor
+
   }
 
   /** Returns the team's name. */
