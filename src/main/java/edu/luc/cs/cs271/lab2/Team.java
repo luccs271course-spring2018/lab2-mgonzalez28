@@ -38,13 +38,13 @@ public class Team {
 
   /** Returns the team's head coach. */
   public String getHeadcoach() {
-    // TODO complete this method
-    return null;
+    return this.headcoach;
+    // DONE complete this method
   }
 
   /** Returns the team's funding level. */
   public int getFunding() {
-    // TODO complete this method
-    return -1;
+    // DONE complete this method
+    return this.funding;
   }
 }
