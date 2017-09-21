@@ -48,12 +48,6 @@ public class Search {
         return Optional.of(i);
       }
     }
-    /*
-    {
-      if (list.get(i).getName().equals(key)){
-          return Optional.of(i);
-      }
-    }*/
     return Optional.empty();
   }
   
@@ -67,7 +61,7 @@ public class Search {
    * @post arr[result].funding >= minFunding && for all 0 <= i < result : arr[i].funding < minFunding
    */
   public static Optional<Integer> findTeamMinFundingFast(final Team[] arr, final int minFunding) {
-    // complete this method
+    // TODO complete this method
     // Gets the array size
     final int size = arr.length;
     // Initially search the entire array
