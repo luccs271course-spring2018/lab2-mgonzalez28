@@ -23,12 +23,14 @@ public class Search {
 
   /** Looks for the position of the named team in a list. */
   public static Optional<Integer> findTeamPosition(final List<Team> list, final String key) {
-    // TODO complete this method
-    //final int length = list.lenght;
-    //for(int )
-    /* System.out.println("#1 normal for loop");
-		for (int i = 0; i < list.size(); i++) {
-			System.out.println(list.get(i)); */
+    // DONE complete this method
+    final int size = list.size();
+    for(int i = 0; i < size; i++)
+    {
+      if (list.get(i).getName().equals(key)){
+          return Optional.of(i);
+      }
+    }
     return Optional.empty();
   }
   
@@ -39,7 +41,19 @@ public class Search {
    * @post arr[result].funding >= minFunding && for all 0 <= i < result : arr[i].funding < minFunding
    */
   public static Optional<Integer> findTeamMinFunding(final Team[] arr, final int minFunding) {
-    // TODO complete this method
+    // DONE complete this method
+    final int size = arr.length();
+    for(int i = 0; i < size; i++) {
+      if(arr[i].getFunding() <= minFunding) {
+        return Optional.of(i);
+      }
+    }
+    /*
+    {
+      if (list.get(i).getName().equals(key)){
+          return Optional.of(i);
+      }
+    }*/
     return Optional.empty();
   }
   
@@ -53,7 +67,7 @@ public class Search {
    * @post arr[result].funding >= minFunding && for all 0 <= i < result : arr[i].funding < minFunding
    */
   public static Optional<Integer> findTeamMinFundingFast(final Team[] arr, final int minFunding) {
-    // TODO complete this method
+    // complete this method
     // Gets the array size
     final int size = arr.length;
     // Initially search the entire array
