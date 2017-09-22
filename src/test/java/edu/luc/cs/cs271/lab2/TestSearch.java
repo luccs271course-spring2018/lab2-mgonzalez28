@@ -15,7 +15,7 @@ public class TestSearch {
   }
 
   // DONE makeListFixture
-  List<Team> makeListFixture (final int size){
+  List<Team> makeListFixture(final int size) {     //List<MyType> myList = new ArrayList<MyType>();
     final List<Team> list = new ArrayList<Team>(size);
     for (int i = 0; i < size; i++) {
       final String s = Integer.toString(i);
