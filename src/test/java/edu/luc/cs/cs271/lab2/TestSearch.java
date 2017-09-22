@@ -2,6 +2,8 @@ package edu.luc.cs.cs271.lab2;
 
 import org.junit.Test;
 import static org.junit.Assert.*;
+import java.util.Arrays;
+import java.util.List;
 
 public class TestSearch {
   
@@ -15,8 +17,8 @@ public class TestSearch {
   }
 
   // DONE makeListFixture
-  List<Team> makeListFixture(final int size) {     //List<MyType> myList = new ArrayList<MyType>();
-    final List<Team> list = new ArrayList<Team>(size);
+  List<Team> makeListFixture(final int size) {     
+    final List<Team> list = new ArrayList<Team>(size); //List<MyType> myList = new ArrayList<MyType>();
     for (int i = 0; i < size; i++) {
       final String s = Integer.toString(i);
       list.add(new Team("Team " + s, "Coach "+ s, i * 100 + 50));
