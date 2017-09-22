@@ -33,16 +33,16 @@ public class Search {
     }
     return Optional.empty();
   }
-  
-  /** 
-   * Looks for the position of the poorest team that has at least 
+
+  /**
+   * Looks for the position of the poorest team that has at least
    * the specified funding level.
    * @pre arr is sorted
    * @post arr[result].funding >= minFunding && for all 0 <= i < result : arr[i].funding < minFunding
    */
   public static Optional<Integer> findTeamMinFunding(final Team[] arr, final int minFunding) {
     // DONE complete this method
-    final int size = arr.length();
+    final int size = arr.length;
     for(int i = 0; i < size; i++) {
       if(arr[i].getFunding() <= minFunding) {
         return Optional.of(i);
@@ -50,12 +50,12 @@ public class Search {
     }
     return Optional.empty();
   }
-  
-  /** 
-   * Looks for the position of the poorest team that has at least 
-   * the specified funding level. 
-   * Uses binary search: Initially search the entire array, 
-   * then repeatedly eliminate the wrong half of the array until 
+
+  /**
+   * Looks for the position of the poorest team that has at least
+   * the specified funding level.
+   * Uses binary search: Initially search the entire array,
+   * then repeatedly eliminate the wrong half of the array until
    * zero or one items are left.
    * @pre arr is sorted
    * @post arr[result].funding >= minFunding && for all 0 <= i < result : arr[i].funding < minFunding
@@ -70,6 +70,24 @@ public class Search {
     // Keep going as long as there is more than one item to be checked
     // Eliminate the wrong half of the array
     // Return current item only if it meets the condition!
+  //  while (high - low >= 0){
+  //    if (arr[low].getFunding() >= minFunding)
+//    }
+  /*while (high – low >= 0)
+mid = (high – low)/2
+	if (item == array[mid]
+	{
+		return found at mid;
+	}
+	else if (item < …)
+	{
+		high = mid – 1;
+	}
+	else
+	{
+		low = mid +1;
+	}*/
+
     if (low <= high && arr[low].getFunding() >= minFunding) {
       return Optional.of(low);
     } else {
