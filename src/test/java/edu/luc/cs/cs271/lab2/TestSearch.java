@@ -2,7 +2,7 @@ package edu.luc.cs.cs271.lab2;
 
 import org.junit.Test;
 import static org.junit.Assert.*;
-import java.util.List;
+import java.util.*;
 
 public class TestSearch {
 
@@ -61,6 +61,7 @@ public class TestSearch {
     final List<Team> list = makeListFixture(10);
     assertFalse(Search.findTeamPosition(list, "Team 11").isPresent());
   }
+}
 
   // TODO: testFindMinFundingArray for several sizes and scenarios
 
