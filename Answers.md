@@ -13,10 +13,10 @@
  
   >The purpose of constructor argument validity checking is to ensure that the arguments that are being passed in a method  make sense so that they dont cause errors that may be harder to identify in other areas of the code. 
   
- <h1>What is the purpose of using the keyword **final** with variables and arguments?
+ <h1>What is the purpose of using the keyword final with variables and arguments?
  
   >The use of keyword final with variables and arguments is to ensure that they are not changed. 
  
  <h1>What are alternatives to using Optional and how do they compare?
  
-  >
+  >An alternative to using Optional could be using if-statements to check if values are non-null and then throw exceptions. Compared to Optional, through this alternative, we would have to explain how to check if a value is null through if-statements and then tell the program what to do if that is the case, while we can use Optional to do that for us, as Optional contains methods that deal with cases in which a value is null/not present or when it is non-null/present.
