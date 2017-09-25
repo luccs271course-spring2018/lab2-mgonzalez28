@@ -13,7 +13,7 @@
  
   >The purpose of constructor argument validity checking is to ensure that the arguments that are being passed in a method  make sense so that they dont cause errors that may be harder to identify in other areas of the code. 
   
- <h1>What is the purpose of using the keyword final with variables and arguments?
+ <h1>What is the purpose of using the keyword **final** with variables and arguments?
  
   >The use of keyword final with variables and arguments is to ensure that they are not changed. 
  
