@@ -71,7 +71,7 @@ public class Main {
     }
   }
 
-  //Print out team information
+  //Prints out team information
   static void printInfo(final Team team, final int pos) {
     System.out.println("Name: " + team.getName());
     System.out.println("Head coach: " + team.getHeadcoach());

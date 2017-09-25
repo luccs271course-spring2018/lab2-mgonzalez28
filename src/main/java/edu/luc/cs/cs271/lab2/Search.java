@@ -61,7 +61,7 @@ public class Search {
    * @post arr[result].funding >= minFunding && for all 0 <= i < result : arr[i].funding < minFunding
    */
   public static Optional<Integer> findTeamMinFundingFast(final Team[] arr, final int minFunding) {
-    // TODO complete this method
+    // DONE complete this method
     // Gets the array size
     final int size = arr.length;
     // Initially search the entire array
@@ -70,24 +70,19 @@ public class Search {
     // Keep going as long as there is more than one item to be checked
     // Eliminate the wrong half of the array
     // Return current item only if it meets the condition!
-  //  while (high - low >= 0){
-  //    if (arr[low].getFunding() >= minFunding)
-//    }
-  /*while (high – low >= 0)
-mid = (high – low)/2
-	if (item == array[mid]
-	{
-		return found at mid;
-	}
-	else if (item < …)
-	{
-		high = mid – 1;
-	}
-	else
-	{
-		low = mid +1;
-	}*/
-
+    while (low <= high) {
+      final int mid = (high + low) / 2;
+      if (arr[mid].getFunding() == minFunding) {
+        return Optional.of(mid);
+      }
+      else if (arr[mid].getFunding() < minFunding) {
+        low = mid + 1;
+      }
+      else if (arr[mid].getFunding() > minFunding) {
+        high = mid - 1;
+      }
+    }
+    
     if (low <= high && arr[low].getFunding() >= minFunding) {
       return Optional.of(low);
     } else {
